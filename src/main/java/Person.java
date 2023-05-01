@@ -7,8 +7,7 @@ public class Person {
     protected final int age;
     protected final String address;
 
-    public static class PersonBuilderInternal
-    {
+    public static class PersonBuilderInternal {
 
     }
 
@@ -19,48 +18,44 @@ public class Person {
         this.address = address;
     }
 
-    public boolean hasAge()
-    {
+    public boolean hasAge() {
         boolean hasAge;
         if (this.age != 0) {
             hasAge = true;
-        }
-        else hasAge = false;
+        } else hasAge = false;
         return hasAge;
     }
-    public boolean hasAddress()
-    {
+
+    public boolean hasAddress() {
         boolean hasAddress;
         if (this.address != null) {
             hasAddress = true;
-        }
-        else hasAddress = false;
+        } else hasAddress = false;
         return hasAddress;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return this.name;
     }
-    public String getSurname()
-    {
+
+    public String getSurname() {
         return this.surname;
     }
-    public OptionalInt getAge()
-    {
+
+    public OptionalInt getAge() {
         return OptionalInt.of(this.age);
     }
-    public String getAddress()
-    {
+
+    public String getAddress() {
         return this.address;
     }
 
     public void setAddress(String address) { /*...*/ }
+
     public void happyBirthday() { /*...*/ }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return this.name + " " + this.surname + ", " + this.age + ", from " + this.address;
     }
 
