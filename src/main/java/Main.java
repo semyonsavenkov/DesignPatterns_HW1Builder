@@ -37,7 +37,6 @@ public class Main {
                     .build();
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
-
         }
     }
 }
