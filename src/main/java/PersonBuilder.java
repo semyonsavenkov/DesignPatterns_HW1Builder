@@ -18,8 +18,12 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setAge(int age) {
-        this.age = age;
-        return this;
+        if (age < 0) {
+            throw new IllegalArgumentException("age can not be less than zero");
+        } else {
+            this.age = age;
+            return this;
+        }
     }
 
     public PersonBuilder setAddress(String address) {
@@ -30,9 +34,7 @@ public class PersonBuilder {
     public Person build() throws IllegalStateException {
         if (surname == null || name == null) {
             throw new IllegalStateException("fields name and surname are required");
-        } else if (age < 0) {
-            throw new IllegalArgumentException("age can not be less than zero");
-        } else {
+        }  else {
             Person person = new Person(name, surname, age, address);
             return person;
         }
