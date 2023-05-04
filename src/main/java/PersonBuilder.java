@@ -34,7 +34,7 @@ public class PersonBuilder {
     public Person build() throws IllegalStateException {
         if (surname == null || name == null) {
             throw new IllegalStateException("fields name and surname are required");
-        }  else {
+        } else {
             Person person = new Person(name, surname, age, address);
             return person;
         }
